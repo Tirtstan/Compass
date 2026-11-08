@@ -1,0 +1,15 @@
+{
+    "name": "tirt.compass.Editor",
+    "rootNamespace": "Compass.Editor",
+    "references": [
+        "tirt.compass"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "noEngineReferences": false
+}
