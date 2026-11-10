@@ -12,7 +12,7 @@ Compass needs Unity 6.0 or later. In **Window > Package Manager**, click **+ > A
 https://github.com/Tirtstan/Compass.git
 ```
 
-Add `#v1.0.0` to the end of the URL to pin a version.
+Add `#v1.1.0` to the end of the URL to pin a version.
 
 ## Use
 
