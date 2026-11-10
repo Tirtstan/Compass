@@ -1,9 +1,9 @@
 {
     "name": "com.tirt.compass",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "displayName": "Compass",
     "description": "Spatial uGUI selection navigation. Directional input selects the nearest selectable, with masks, preferred targets and wrapping.",
-    "unity": "6000.3",
+    "unity": "6000.0",
     "documentationUrl": "https://github.com/Tirtstan/Compass#readme",
     "changelogUrl": "https://github.com/Tirtstan/Compass/blob/main/CHANGELOG.md",
     "licensesUrl": "https://github.com/Tirtstan/Compass/blob/main/LICENSE.md",

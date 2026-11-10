@@ -2,6 +2,14 @@
 
 This file lists the notable changes in each release. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-11-10
+
+### Changed
+
+- **Project Settings > Compass** lists the named slots with their mask bit. You can rename any slot, add a name to the lowest empty slot, and remove a slot with its − button. Names must be unique, and undo works for every change.
+- Compass now supports Unity 6.0 and later. It needed 6000.3 before.
+- The README is shorter and has screenshots.
+
 ## [1.0.0] - 2026-11-08
 
 ### Added

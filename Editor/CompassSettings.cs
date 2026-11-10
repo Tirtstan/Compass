@@ -29,7 +29,57 @@ namespace Compass.Editor
         public void SetSlotName(int slot, string slotName)
         {
             EnsureSlotCount();
-            slotNames[slot] = slotName.Trim();
+            slotNames[slot] = slotName?.Trim() ?? string.Empty;
+        }
+
+        /// <summary>
+        /// Index of the named slot, or -1 when no slot has that name.
+        /// </summary>
+        public int FindSlot(string slotName)
+        {
+            EnsureSlotCount();
+            string trimmed = slotName?.Trim();
+            if (string.IsNullOrEmpty(trimmed))
+                return -1;
+
+            for (int i = 0; i < SlotCount; i++)
+            {
+                if (string.Equals(slotNames[i], trimmed, StringComparison.OrdinalIgnoreCase))
+                    return i;
+            }
+
+            return -1;
+        }
+
+        /// <summary>
+        /// Index of the lowest unnamed slot, or -1 when all slots are named.
+        /// </summary>
+        public int FindFreeSlot()
+        {
+            EnsureSlotCount();
+            for (int i = 0; i < SlotCount; i++)
+            {
+                if (string.IsNullOrEmpty(slotNames[i]))
+                    return i;
+            }
+
+            return -1;
+        }
+
+        public int NamedSlotCount
+        {
+            get
+            {
+                EnsureSlotCount();
+                int count = 0;
+                foreach (string slotName in slotNames)
+                {
+                    if (!string.IsNullOrEmpty(slotName))
+                        count++;
+                }
+
+                return count;
+            }
         }
 
         public void SaveSettings() => Save(true);
